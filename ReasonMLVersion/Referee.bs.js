@@ -3,8 +3,8 @@
 
 var Curry = require("bs-platform/lib/js/curry.js");
 var AIPlayer$Game = require("./AIPlayer.bs.js");
-var Connect4$Game = require("./Connect4.bs.js");
-var HumanPlayer$Game = require("./HumanPlayer.bs.js");
+var Connect4$Game = require("../Connect4.bs.js");
+var HumanPlayer$Game = require("../HumanPlayer.bs.js");
 var Caml_js_exceptions = require("bs-platform/lib/js/caml_js_exceptions.js");
 
 function Referee(MyGame, Player1, Player2) {
