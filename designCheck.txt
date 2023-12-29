@@ -1,0 +1,35 @@
+nextState implementation
+- Checks if the move given is a legal move by checking if the coordinate is taken and if 
+the spot below it is taken
+- if true, then iterates through the board until it reaches the spot and changes the value
+
+estimateValue definition
+- If P1 wins, it returns a 4. If P2 wins, it returns a -4. Whoever has the most numbers of game pieces in 
+a row. Maybe do the different most number of game pieces in a row?
+
+Which procedures in your Connect4 module will the AI player use? Why?
+- gameStatus => to see the current layout of the board
+- legalMoves => to know which moves the AI can make
+- estimateValue => to know the best move for the AI to make
+
+What should the AI player do if there are no legal moves available? If you don’t think this should ever
+happen, tell us why not.
+- Nothng, and the game should end in a draw. If there are no moves available, then the board is full.
+
+How does your AI player take into account the fact that the other player wants the AI player to lose?
+Does your strategy work even if two AI players are playing against each other?
+- It considers the worst case scenario in the estimateValue function. I think it works better when two AI
+play against each other because it will be more predictable. Humans are not as predictable as computers. 
+
+How does the HumanPlayer code work? What does it rely on? You will be asked to walk the TA
+through a brief explanation of the HumanPlayer code to prove that you understand it.
+- First checks if the player wants to exit the game. Then its going to try the move given the string and 
+state. If its an illegal  ove, then it will let the player know and ask for a new move. 
+It relies on the Connect4 module and the helpers inside. 
+
+How does the Referee code work? Like with HumanPlayer, you’ll be asked to walk the TA through a
+brief explanation of the Referee code to prove that you understand it.
+- The referee faciliates the game and constantly returns the status of the game. Additionally, it regulates 
+the turns, recording the player and their move in the output. There is a try statement at the end
+so if there is ever an illegal move or the game breaks, the players will be notified and they can type 
+new inputs to keep it going instead of the program stopping compeletely.
